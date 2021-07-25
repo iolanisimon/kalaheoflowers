@@ -8,7 +8,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-image: url(Images/hero.jpg); 
+  background-image: url(Images/heroimage.jpg); 
   transition-duration: 0.5s;
 }
  
@@ -219,7 +219,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(images/hero.jpg);
+    background: url(Images/heroimage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
