@@ -67,21 +67,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
-@media all and (max-width: 500px) {
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-  }
-}
-
 /* Heading Classes */
 
 .nodecoration-black {
   text-decoration: none;
-  text-decoration-color: none;
   color: black;
+  text-decoration-color: transparent;
 }
 
 .nodecoration-gray {
@@ -323,7 +314,7 @@ html, body {
 * {
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: system-ui;
   }
@@ -355,7 +346,7 @@ html, body {
       transition-duration: 1s;
     }
   }
-  
+
   /* Style the counter cards */
   .card {
     padding: 16px;
@@ -375,7 +366,6 @@ html, body {
     opacity: 1;
     transition-duration: 0.5s;
     border-radius: 8px;
-    cursor: pointer;
   }
 
   .card-2 {
@@ -396,7 +386,6 @@ html, body {
     opacity: 1;
     transition-duration: 0.5s;
     border-radius: 8px;
-    cursor: pointer;
   }
 
   .card-3 {
@@ -417,7 +406,6 @@ html, body {
     opacity: 1;
     transition-duration: 0.5s;
     border-radius: 8px;
-    cursor: pointer;
   }
 
   .card-4 {
@@ -438,7 +426,25 @@ html, body {
     opacity: 1;
     transition-duration: 0.5s;
     border-radius: 8px;
-    cursor: pointer;
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    .card {
+      opacity: 100%;
+    }
+
+    .card-2 {
+      opacity: 100%;
+    }
+
+    .card-3 {
+      opacity: 100%;
+    }
+
+    .card-4 {
+      opacity: 100%;
+    }
   }
 
 /*CSS For Description on Index*/
@@ -462,6 +468,10 @@ html, body {
   .margincenter-index {
     margin: 20px 100px;
     transition-duration: 0.5s;
+    color: black;
+  }
+  .margincenter-index {
+    color: black;
   }
 }
 
@@ -471,9 +481,11 @@ html, body {
     transition-duration: 0.5s;
     color: black;
   }
+  .margincenter-index:hover {
+    color: black;
+    opacity: 1;
+  }
 }
-
-
 
 .margincenter-index:hover {
   text-align: center;
@@ -486,6 +498,12 @@ html, body {
 .wrapgallery {
   border-color: black;
   border-width: 10px;
+}
+
+@media all and (max-width: 1100px) {
+  .wrapgallery {
+    display: none;
+  }
 }
 
 div.gallery {
@@ -549,6 +567,13 @@ div.gallery img:hover {
 
 /*Index Reviews CSS*/
 
+.margincenter-photogallery {
+  text-align: center;
+  margin: 30px 150px;
+  margin: 40px;
+}
+
+
 .reviewrating {
   color: rgb(201, 181, 0);
   transition-duration: 0.5s;
@@ -599,16 +624,16 @@ div.gallery img:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-image: linear-gradient(transparent, rgb(233, 233, 233));
   color: rgb(0, 0, 0);
   text-align: center;
   max-height: 10px;
   transition-duration: 1s;
 }
 
-.footer:hover, .footerlink:hover {
-  font-size: 18px;
-  transition-duration: 1s;
+@media all and (max-width: 500px) {
+  .footer {
+    margin: 0px 0px;
+  }
 }
 
 .footerlink {
