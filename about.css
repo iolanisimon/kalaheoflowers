@@ -1,0 +1,215 @@
+/*Custom Scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  transition-duration: 0.5s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  transition-duration: 0.5s;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 241, 241); 
+  transition-duration: 0.5s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(204, 204, 204);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+/*Overlay*/
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlaytext{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+/* Font */
+
+body {   
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    animation: fadeanddropIn 1s;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  animation: fadeanddropIn 1s;
+}
+
+/* Heading Classes */
+
+.nodecoration-black {
+  text-decoration: none;
+  color: black;
+  text-decoration-color: transparent;
+}
+
+.nodecoration-gray {
+  color: rgb(124, 124, 124);
+  text-decoration: none;
+}
+
+.h3-homenumber {
+   text-align: center;
+   transition-duration: 3s;
+}
+
+.h3-homenumber:hover {
+  font-size: 24px;
+  transition-duration: 0.3s;
+}
+
+.margincenter {
+  text-align: center;
+  margin: 30px 150px;
+}
+
+.center {
+  text-align: center;
+}
+
+.banner-green {
+    padding: 0px 22px;
+    color: black;
+    transition-duration: 0.5s;
+  }
+  
+  .banner-green:hover {
+    color: rgb(0, 209, 45);
+    transition-duration: 0.5s;
+    cursor: none;
+  }
+  
+  .banner-red {
+      padding: 0px 22px;
+      color: black;
+      transition-duration: 0.5s;
+    }
+    
+  .banner-red:hover {
+      color: rgb(255, 128, 128);
+      transition-duration: 0.5s;
+      cursor: none;
+    }  
+  
+  @media all and (max-width: 1100px) {
+    .banner-green .banner-red { 
+      text-align: left;
+      transition-duration: 1s;
+      margin: 30px 32px;
+    }
+  }
+  
+  @media all and (max-width: 500px) {
+    .banner-green .banner-red { 
+      text-align: center;
+      transition-duration: 1s;
+    }
+  }
+
+/* Navigation */
+  
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 0.4s;
+  }
+
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: rgb(0, 156, 0);
+    transition-duration: 0.4s;
+    transition-property: all;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
+    font-weight: 600;
+  }
+  
+  @media all and (max-width: 1100px) {
+    .topnav a {
+      text-align: center;
+      align-content: center;
+      margin: 0px 40px;
+      transition-duration: 1s;
+      text-justify: distribute;
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    .topnav a { 
+      text-align: center;
+      width: 70%;
+      display: block;
+      margin-bottom: 20px;
+      transition-duration: 1s;
+  }
+}
+
+
+  .topnav a.active:hover {
+    color: rgb(146, 146, 146);
+    transition-duration: 0.4s;
+    transition-property: all;
+    cursor: not-allowed;
+  }
+
+  .navigation-barimg {
+    float: left;
+    display: block;
+    max-width: 20%;
+    max-height: 10%;
+    padding: 5.7px 10px;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 3s;
+  }
+
+  @media all and (max-width: 1100px) {
+    .navigation-barimg {visibility: hidden;}
+  }
+  
+  @media all and (max-width: 1100px) {
+    .navigation-barimg {display:none;}
+  }

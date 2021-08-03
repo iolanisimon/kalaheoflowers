@@ -2,20 +2,22 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
   transition-duration: 0.5s;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-image: url(Images/heroimage.jpg); 
   transition-duration: 0.5s;
+  background-color: black;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(241, 241, 241); 
+  background: rgb(112, 112, 112); 
   transition-duration: 0.5s;
+  border-radius: 8px;
+  width: 5px;
 }
 
 /* Handle on hover */
@@ -24,33 +26,6 @@
   transition-duration: 0.5s;
   cursor: pointer;
 }
-
-/*Overlay*/
-
-.overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-
-.overlaytext{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-}
-
 
 /* Font */
 
@@ -99,20 +74,34 @@ html, body {
   text-align: center;
 }
 
-.banner {
+.banner-green {
   padding: 0px 22px;
   color: black;
   transition-duration: 0.5s;
+  animation: fadeanddropIn-1 1s;
 }
 
-.banner:hover {
-  color: rgb(255, 128, 128);
+.banner-green:hover {
+  color: rgb(0, 209, 45);
   transition-duration: 0.5s;
   cursor: none;
 }
 
+.banner-red {
+    padding: 0px 22px;
+    color: black;
+    transition-duration: 0.5s;
+    animation: fadeanddropIn-1 1s;
+  }
+  
+.banner-red:hover {
+    color: rgb(255, 128, 128);
+    transition-duration: 0.5s;
+    cursor: none;
+  }  
+
 @media all and (max-width: 1100px) {
-  .banner { 
+  .banner-green .banner-red { 
     text-align: left;
     transition-duration: 1s;
     margin: 30px 32px;
@@ -120,7 +109,7 @@ html, body {
 }
 
 @media all and (max-width: 500px) {
-  .banner { 
+  .banner-green .banner-red { 
     text-align: center;
     transition-duration: 1s;
   }
@@ -138,6 +127,7 @@ html, body {
     text-decoration: none;
     font-size: 17px;
     transition-duration: 0.4s;
+    animation: fadeanddropIn 0.5s ease-out forwards;
   }
 
   
@@ -153,6 +143,7 @@ html, body {
     color: rgb(0, 0, 0);
     transition-duration: 0.4s;
     font-weight: 600;
+    animation: fadeanddropIn-1 1s;
   }
   
   @media all and (max-width: 1100px) {
@@ -162,16 +153,18 @@ html, body {
       margin: 0px 40px;
       transition-duration: 1s;
       text-justify: distribute;
+      animation: fadeanddropIn-3 0.5s;
     }
   }
 
   @media all and (max-width: 500px) {
     .topnav a { 
       text-align: center;
-      margin: 0px 210px;
+      width: 70%;
+      display: block;
+      margin-bottom: 20px;
       transition-duration: 1s;
-      cursor: pointer;
-      position: relative;
+      animation: fadeanddropIn-3 0.5s;
   }
 }
 
@@ -191,6 +184,7 @@ html, body {
     padding: 5.7px 10px;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-duration: 3s;
+    animation: fadeanddropIn 0.5s ease-out forwards;
   }
 
   @media all and (max-width: 1100px) {
@@ -201,6 +195,16 @@ html, body {
     .navigation-barimg {display:none;}
   }
 
+
+
+
+
+
+
+
+
+  
+  
 /* HOME HERO */
 
   .hero {
@@ -230,9 +234,6 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.hero-content {
-    position: relative;
-}
 
 .hero {
     position: relative;
@@ -255,11 +256,13 @@ html, body {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0;
+    animation: fadeanddropIn-1 1s ease-out forwards;
 }
 .hero-subtitle {
     font-size: 1.4rem;
     font-weight: 400;
     margin-top: 1rem;
+    animation: fadeanddropIn-2 1s ease-out forwards;
 }
 
 .hero-button {
@@ -275,6 +278,7 @@ html, body {
     transition-duration: 0.4s;
     border-radius: 8px;
     cursor: none;
+    animation: fadeanddropIn-3 1s;
 }
 
 .hero-button:hover {
@@ -300,6 +304,7 @@ html, body {
   cursor: none;
   width: 120px;
   text-align: center;
+  animation: fadeanddropIn-3 1s;
 }
 
 .hero-button2:hover {
@@ -621,13 +626,10 @@ div.gallery img:hover {
 /*Footer*/
 
 .footer {
-  padding: 100px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  margin: 80px;
+  padding: 0px 20px;
   color: rgb(0, 0, 0);
   text-align: center;
-  max-height: 10px;
   transition-duration: 1s;
 }
 
